@@ -1,3 +1,36 @@
 body{
-    background-color: aqua;
+    background-color: burlywood;
+}
+#main-header{
+    margin: auto;
+    font-size: 90px;
+    color: crimson;
+    text-align: center;
+    margin-top: 120px;
+    
+}
+#parent-div{
+    width: 670px;
+    height: 800px;
+    background-color: rgb(221, 79, 23);
+   margin-bottom: 400px;
+   margin: auto;
+}
+.div-children{
+    width: 150px;
+    height: 200px;
+    background-color: cornsilk;
+    border: burlywood 1px solid;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#reset-button{
+font-size: 50px;
+margin-left: 185px;
+margin-top: 20px;
+border-radius: 20px;
+color: red;
+background-color: blanchedalmond;
+
 }
