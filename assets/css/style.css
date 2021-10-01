@@ -34,3 +34,31 @@ color: red;
 background-color: blanchedalmond;
 
 }
+#header-2{
+    margin-top: 150px;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    border-bottom: blanchedalmond 2px solid ;
+}
+#middle{
+    margin: auto;
+    width: 700px;
+    height: 100px;
+    
+}
+.scores{
+display: inline;
+font-size: 50px;
+color: rgb(255, 255, 255);
+
+margin-left: 120px;
+
+
+}
+#win{
+    color: rgb(61, 252, 61);
+}
+#loss{
+    color: red;
+}
