@@ -68,6 +68,67 @@ margin-left: 120px;
 }
 /* Media Querries!! */
 
-@media   (max-width: 500px ) {
-    
+@media screen and (max-width: 549px ) {
+    #main-header{
+        margin: auto;
+        font-size: 70px;
+        color: crimson;
+        text-align: center;
+        margin-top: 120px;
+        margin-left: 150px; ;
+        
+    }
+
+    #header-2{
+        margin-top: 150px;
+        margin-left: 150px;
+        position: relative;
+        font-size: 60px;
+        text-align: center;
+        color: white;
+        border-bottom: blanchedalmond 2px solid;
+    }
+}
+
+@media screen and (max-width: 431px ) {
+    #main-header{
+      
+        font-size: 50px;
+        color: crimson;
+        text-align: center;
+        margin-top: 120px;
+        margin-left: 200px; ;
+        
+    }
+
+    #header-2{
+        margin-top: 150px;
+        margin-left: 150px;
+        font-size: 60px;
+        text-align: center;
+        color: white;
+        border-bottom: blanchedalmond 2px solid ;
+    }
+}
+
+@media screen and (max-width: 399px ) {
+    #main-header{
+      
+        font-size: 40px;
+        color: crimson;
+        text-align: center;
+        margin-top: 120px;
+        margin-left: 150px; 
+       
+        
+    }
+
+    #header-2{
+        margin-top: 150px;
+        margin-left: 150px ;
+        font-size: 60px;
+        text-align: center;
+        color: white;
+        border-bottom: blanchedalmond 2px solid ;
+    }
 }
