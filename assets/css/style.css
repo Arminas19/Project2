@@ -12,14 +12,14 @@ body{
 }
 /*  The div that holds every other div together and also it's children div's + reset button */
 #parent-div{
-    width: 670px;
+    width: 820px;
     height: 800px;
     background-color: rgb(221, 79, 23);
    margin-bottom: 400px;
    margin: auto;
 }
 .div-children{
-    width: 150px;
+    width: 200px;
     height: 200px;
     background-color: cornsilk;
     border: burlywood 1px solid;
@@ -29,7 +29,7 @@ body{
 }
 #reset-button{
 font-size: 50px;
-margin-left: 185px;
+margin-left: 260px;
 margin-top: 20px;
 border-radius: 20px;
 color: red;
