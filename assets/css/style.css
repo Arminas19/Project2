@@ -34,7 +34,9 @@ margin-top: 20px;
 border-radius: 20px;
 color: red;
 background-color: blanchedalmond;
-
+width: 300px;
+height: 80px;
+border: 2px black solid;
 }
 /*  The Sores Header underneat the game*/
 #header-2{
