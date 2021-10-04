@@ -12,7 +12,7 @@ for(div of divs){
         }
         else{
             this.getAttribute("data-type") === "div1-9";
-            runGame(getRandomImage);
+            getRandomImage()
         }
 
     })
@@ -23,12 +23,16 @@ for(div of divs){
 
 
 
-function runGame(getRandomImage){
-//alert('runGame function has been activated');
+
+
 
 let image_Array = [
 'bell (1).png',
+'bell (1).png',
+'bell (1).png',
 'cherry (1).png',
+'cherry (1).png',
+'lemon (1).png',
 'lemon (1).png',
 'orange (1).png',
 'watermelon (1).png'
@@ -36,16 +40,21 @@ let image_Array = [
 
 function getRandomImage(){
 
+    alert('getRandomImage function has been activated');
+
 random_index = Math.floor(Math.random() * image_Array.length);
 
 selectedImage = image_Array[random_index]
 
-document.getElementsByClassName('image-div').src = `./images/${selectedImage}`
+let imagesArray = document.getElementsByClassName('image-div').src = `./images/${selectedImage}`
 
-return getRandomImage
+for(imageArray of imagesArray){
+
 }
 
 }
+
+
 
 function resetButton(){
     alert('resetButton function has been activated');
