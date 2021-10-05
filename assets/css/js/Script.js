@@ -1,62 +1,60 @@
 /* Alert pop-up when ever the user loads or reloads the page.*/
 alert(" ⓘ How To Play  ★ Match 3 bell Icons to get a win, Once the game is complete press the Reset button to start again. If you guess an incorrect icon you loss.");
 
-document.addEventListener("DOMContentLoaded", function(){
-    
- let divs = document.getElementsByClassName("div-children");
-for(div of divs){
+document.addEventListener("DOMContentLoaded", function () {
 
-    div.addEventListener("click", function(){
-        if(this.getAttribute("data-type") === "submit"){
-                resetButton();
-        }
-        else{
-            this.getAttribute("data-type") === "div1-9";
-            getRandomImage()
-        }
+    let divs = document.getElementsByClassName("div-children");
+    for (div of divs) {
 
-    })
+        div.addEventListener("click", function () {
+            getRandomImage(this)
+
+        })
+    }
+    let resetButton = document.getElementById("reset-button");
+    resetButton.addEventListener("click", resetButton);
 }
-});
-
-
-
-
-
-
+);
 
 
 let image_Array = [
-'bell (1).png',
-'bell (1).png',
-'bell (1).png',
-'cherry (1).png',
-'cherry (1).png',
-'lemon (1).png',
-'lemon (1).png',
-'orange (1).png',
-'watermelon (1).png'
+    'assets/images/bell (1).png',
+    'assets/images/bell (1).png',
+    'assets/images/bell (1).png',
+    'assets/images/cherry (1).png',
+    'assets/images/cherry (1).png',
+    'assets/images/lemon (1).png',
+    'assets/images/lemon (1).png',
+    'assets/images/orange (1).png',
+    'assets/images/watermelon (1).png'
 ]
 
-function getRandomImage(){
+function getRandomImage(imageDiv) {
 
     alert('getRandomImage function has been activated');
 
-random_index = Math.floor(Math.random() * image_Array.length);
+    random_index = Math.floor(Math.random() * image_Array.length);
 
-selectedImage = image_Array[random_index]
+    selectedImage = image_Array[random_index]
 
-let imagesArray = document.getElementsByClassName('image-div').src = `./images/${selectedImage}`
+    //let imagesArray = document.getElementsByClassName('image-div').src = `../assets/css/images/${selectedImage}`
+    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+    imagesArray.style.backgroundImage = `url('${selectedImage}')`;
 
-for(imageArray of imagesArray){
+    // for(let i = 0; i < imagesArray.length; i++){
 
+    //     if (imagesArray.background = `url('+${selectedImage}+')`) {
+
+    //     } else {
+    //         this.style.backgroundColor = "cornsilk";
+    //     }
+
+
+    // }
 }
 
-}
 
-
-
-function resetButton(){
+function resetButton() {
     alert('resetButton function has been activated');
     getRandomImage();
 
