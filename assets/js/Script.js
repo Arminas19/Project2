@@ -72,16 +72,19 @@ function calculateAnswer(element) {
 
     console.log(element)
     console.log(window.getComputedStyle(element, null).backgroundImage)
-    
-    let imgsrc = document.getElementsByTagName("img").src;
 
-    switch (imgsrc) {
-        case element.src == `url('assets/images/bell (1).png')`:
-            ++bell;
+    console.log('This is the element ' + element.style.backgroundImage)
+   // let imgsrc = document.getElementsByTagName("img").src;
+
+    let switchUrl = 'url("assets/images/bell (1).png")'
+    
+    switch (element.style.backgroundImage) {
+        case switchUrl:
+            bell += 1;
             alert(`You Found ${bell} bell icons`);
             break;
-        case element.src !== `url('assets/images/bell (1).png')`:
-            ++failedAttempt
+        case ! switchUrl:
+            failedAttempt += 1;
             alert(`You have ${failedAttempt}/3 trys left`);
             break;
         default:
