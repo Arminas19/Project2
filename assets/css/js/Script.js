@@ -44,7 +44,7 @@ function getRandomImage(imageDiv) {
     //let imagesArray = document.getElementsByClassName('image-div').src = `../assets/css/images/${selectedImage}`
     let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
         imagesArray.style.backgroundImage = `url('${selectedImage}')`;
-    
+    calculateAnswer();
     // for(let i = 0; i < imagesArray.length; i++){
 
     //     if (imagesArray.background = `url('+${selectedImage}+')`) {
@@ -61,13 +61,30 @@ This function gets the <img> src value from the DOM and checks if that value is 
 Once the a bell icon's url is found, the let bell = 0 icon increase and once it get's to 3 it calles the player has won function.
 if bell = 3 never arrives the player has lost function is called.
 */
-let bell = 0;
+//let bell = 0;
 
-function calculateAnswer(bell){
+function calculateAnswer(){
+    console.log('You have made it to calculateAnswer');
+    let bell = 0;
+    let failedAttempt = 0;
+    //let img = document.getElementsByTagName('img')[this].src;
+    let imgsrc = document.getElementsByTagName("img").src;
+switch(imgsrc){
+        case imgsrc.src == `url('assets/images/bell (1).png')`:
+            ++bell;
+            alert(`You Found ${bell} bell icons`);
+    break;
+        case imgsrc.src !== `url('assets/images/bell (1).png')`:
+            ++failedAttempt
+            alert(`You have ${failedAttempt}/3 trys left`);
+    break;
+        default:
+            console.log('Unkown Error')
+        break;
+}
 
-    let img = document.getElementsByTagName('img')[0].src;
     
-    if(img === `url('assets/images/bell (1).png')`){
+   /* if(img === `url('assets/images/bell (1).png')`){
         ++bell;
         
         console.log(bell);
@@ -82,7 +99,7 @@ function calculateAnswer(bell){
     else{
         console.log('The player lost')
     }
-    
+    */
 
 }
 
