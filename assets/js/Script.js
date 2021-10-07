@@ -125,13 +125,16 @@ function calculateAnswer(element) {
 function playerHasWon() {
 alert('You Won!!');
 
-
+let win = parseInt(document.getElementById('win').innerText);
+document.getElementById('win').innerText = ++win; 
 
 }
 
 function playerHasLost() {
 alert(' You Lost :( ');
 
+let loss = parseInt(document.getElementById('loss').innerText);
+document.getElementById('loss').innerText = ++loss; 
 }
 
 
