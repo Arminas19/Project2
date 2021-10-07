@@ -63,11 +63,12 @@ Once the a bell icon's url is found, the let bell = 0 icon increase and once it 
 if bell = 3 never arrives the player has lost function is called.
 */
 //let bell = 0;
-
+let bell = 0;
+let failedAttempt = 0;
 function calculateAnswer(element) {
     console.log('You have made it to calculateAnswer');
-    let bell = 0;
-    let failedAttempt = 0;
+  
+    
     //let img = document.getElementsByTagName('img')[this].src;
 
     console.log(element)
@@ -83,16 +84,25 @@ function calculateAnswer(element) {
             bell += 1;
             alert(`You Found ${bell} bell icons`);
             break;
-        case ! switchUrl:
-            failedAttempt += 1;
-            alert(`You have ${failedAttempt}/3 trys left`);
+        case  !switchUrl:
+           // failedAttempt += 1;
+           // alert(`You have ${failedAttempt}/3 trys left`);
             break;
         default:
-            console.log('Unkown Error')
+            failedAttempt += 1;
+            alert(`You have ${failedAttempt}/3 trys left`);
+            console.log('Unkown Error');
             break;
     }
-
-
+    console.log('This is the bell ' + bell);
+    console.log('This is the failed Attemts ' + failedAttempt);
+   
+    if(bell === 3){
+        playerHasWon();
+    }
+    if(failedAttempt === 3){
+        playerHasLost();
+    }
     /* if(img === `url('assets/images/bell (1).png')`){
          ++bell;
          
@@ -112,11 +122,15 @@ function calculateAnswer(element) {
 
 }
 
-function checkAnswers() {
+function playerHasWon() {
+alert('You Won!!');
+
+
 
 }
 
-function Scores() {
+function playerHasLost() {
+alert(' You Lost :( ');
 
 }
 
