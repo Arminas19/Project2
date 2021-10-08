@@ -35,7 +35,7 @@ let image_Array = [
 ]
 
 function getRandomImage(imageDiv) {
-
+   
     // alert('getRandomImage function has been activated');
 
     random_index = Math.floor(Math.random() * image_Array.length);
@@ -83,6 +83,7 @@ function calculateAnswer(element) {
         case switchUrl:
             bell += 1;
             alert(`You Found ${bell} bell icons`);
+            
             break;
         case  !switchUrl:
            // failedAttempt += 1;
@@ -122,24 +123,52 @@ function calculateAnswer(element) {
 
 }
 
+
+
+
+
+
 function playerHasWon() {
 alert('You Won!!');
 
 let win = parseInt(document.getElementById('win').innerText);
 document.getElementById('win').innerText = ++win; 
 
+    getRandomImage = (imageDiv) => {
+    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+    imagesArray.style.backgroundImage = undefined;
 }
+
+calculateAnswer = () => {
+
+}
+
+}
+
 
 function playerHasLost() {
 alert(' You Lost :( ');
 
 let loss = parseInt(document.getElementById('loss').innerText);
 document.getElementById('loss').innerText = ++loss; 
+
+   getRandomImage = (imageDiv) => {
+    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+    imagesArray.style.backgroundImage = undefined;
+   }
+   calculateAnswer = () => {
+
+   }
+
 }
 
 
+ 
 function resetButton() {
     alert('resetButton function has been activated');
-
-
+    resetGame();
+   
+}
+function resetGame(){
+   
 }
