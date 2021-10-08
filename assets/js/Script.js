@@ -134,9 +134,9 @@ alert('You Won!!');
 let win = parseInt(document.getElementById('win').innerText);
 document.getElementById('win').innerText = ++win; 
 
-    getRandomImage = (imageDiv) => {
-    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
-    imagesArray.style.backgroundImage = undefined;
+getRandomImage = (imageDiv) => {
+let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+imagesArray.style.backgroundImage = undefined;
 }
 
 calculateAnswer = () => {
@@ -152,13 +152,13 @@ alert(' You Lost :( ');
 let loss = parseInt(document.getElementById('loss').innerText);
 document.getElementById('loss').innerText = ++loss; 
 
-   getRandomImage = (imageDiv) => {
-    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
-    imagesArray.style.backgroundImage = undefined;
+getRandomImage = (imageDiv) => {
+let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+imagesArray.style.backgroundImage = undefined;
    }
-   calculateAnswer = () => {
+calculateAnswer = () => {
 
-   }
+}
 
 }
 
@@ -170,5 +170,53 @@ function resetButton() {
    
 }
 function resetGame(){
+    getRandomImage = (imageDiv) => {
+        
+
+        random_index = Math.floor(Math.random() * image_Array.length);
+
+        selectedImage = image_Array[random_index]
+    
+        
+        let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+        imagesArray.style.backgroundImage = `url('${selectedImage}')`;
+        }
+
+        let bell = 0;
+        let failedAttempt = 0;
+
+        calculateAnswer = (element) => {
+            console.log(element)
+    console.log(window.getComputedStyle(element, null).backgroundImage)
+
+    console.log('This is the element ' + element.style.backgroundImage)
+  
+
+    let switchUrl = 'url("assets/images/bell (1).png")'
+    
+    switch (element.style.backgroundImage) {
+        case switchUrl:
+            bell += 1;
+            alert(`You Found ${bell} bell icons`);
+            
+            break;
+        case  !switchUrl:
+          
+            break;
+        default:
+            failedAttempt += 1;
+            alert(`You have ${failedAttempt}/3 trys left`);
+            console.log('Unkown Error');
+            break;
+    }
+    console.log('This is the bell ' + bell);
+    console.log('This is the failed Attemts ' + failedAttempt);
    
+            if(bell === 3){
+                playerHasWon();
+            }
+            if(failedAttempt === 3){
+                playerHasLost();
+            }
+        }
 }
