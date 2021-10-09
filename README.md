@@ -7,79 +7,62 @@ icons or losses by getting 3 wrong guesses a function is called to calculate the
 if the user get's a win point or a loss point. After the game is finished the user will have a reset button to press
 which reset's the images and the player can play again. 
 
-![Home Page](assets/images/Matching game.PNG)
-![Home Page](assets/images/Matching game2.PNG)
+![Home-page](assets/images/Matchinggame.PNG)
+
+![Home-page](assets/images/Matchinggame2.PNG)
+
 ## Features 
 
-* Navigation menu
-   + My navigation menu has 3 different pages labeled Home, More, and Sign-up. I have an underline to mark where on the website the user is at. 
-   + My website is linear so that it's very easy to navigate through, the sections are clearly separated but not too far from each other, all my content is in a different color from the background so that it stands out. 
-   + I have created a color and added a font that makes my content look sporty and that fits into my product.
+* Alert 
+ + When a user first loads in, they will see a alert pop-up which will tell the user how to play this game. 
+
+![Alert](assets/images/alert!.PNG)
+  
+***
+
+* The Game Area
+ + This section will allow the user to play the Matching game. The user will be able to click on a square box to 
+   display a image.  
+   + The user will be able to see how many guesses they have left whenever they click on the square box, an alert will show up and give the user a number between 1/3 depending on how many times they have guessed wrong.
+ ![game-area](assets/images/game-area.PNG)
+   
 
 
 ***
 
-* Header
-   + The header on my page is a picture with the title FIFA 22 and there is a football player beside my header.
+* Reset-button
+   + The Reset-button on my page is located right below my game-area so that the user knows what the reset button is resetting.
 
-   + I put multiple images with the header 'Fifa 22' so that the user clearly understands what this webpage is all about.
- 
-   + The main header has a box with some Pre Order information, the pre-order box tells the user that if you pre-order you get exclusive content, and then the price below is shown. 
-
-![Pre-Order box](assets/css/images/pre-order-box.PNG)
+![reset-button](assets/images/resetB.PNG)
 ***
 
-* Home Page Content
+* Scores
 
-   + The home page content talks about what are the new features of the game, this is done in two different boxes.
-   + The content on the home page has a FIFA picture with a FIFA EA Sports logo. 
-   + I have made the content in this type of color scheme to make sure it stands out from the background and that it would look sporty so that it would fit my product.
+   + This section will allow the user to see exactly how many wins and losses they have got.
+   + The scores section is located underneat the reset-button. 
+   
 
-![Home Page Content](assets/css/images/home-page-content.PNG)
+![Scores](assets/images/Scores.PNG)
 *** 
 
-**More page**
- * header
-   + I added some new styling to my navigation (in the More page) to add a more cleaner look.
-   + The navigation menu fits in with my product and the color scheme so it adds to my look and it looks different than my home page navigation. 
-   + This navigation acts just like my home navigation and it has the class active on the More page to let the user know where they are at. 
+**Features Left to Implement**
+ * header + footer + javaScrit
+   + If i had more time i would like to style my page a bit more and polish it (make the header nicer) .
+   + I will add a footer in my spear time to make this look more complete. 
+   + I want to add a function where the user will have a pop-up when they win or loss. 
 
-   ![More Page Navigation](assets/css/images/More-nav.PNG)
- * Fifa 22 trailer
-   + I added a video of the official Fifa 22 trailer to make the website more appealing and interactive to a user. 
-   + The video has a title 'Fifa 22 trailer' to let the user know what this video is about. 
-   + The purpose of this video is to show the client how the product looks and what to expect. 
+***
+    
+   ## Testing
+   + I have tested all the functions by playing the game once i have implemented a new function, The first function i created was for an EventListener which gets activated once the game is fully loaded and this function sets of the other function which are the reset-button function and the getRandomImage function. I have fully tested out theys functions and i know the pros and cons of each function, the problem i still face but plan on fixing is that the getRandomFunction randomizes the images but it dose not garintee that all bell icons will load, There is another issue with this function, the user can just keep on clicking on one div and that will count as if the user clicked on different divs (which is not cheating since the princle of the game is still the same, but it's not as intended). Of course theys problems can be easily fixed with a bit of javaScript knowlege so im not too worried about it now but i still plan on fixing theys. I also had an issue with the caluclateAnswer function but i fixed it, the problem was in my switch case, my case 2 wouldnt work but i fixed that problem by excuting the code on the default case instead. The calculateAnswer function called the playerHasWon or playerHasLost depeanding on if the player won or not and i had alot of trail and errors with they's function but over a period of time i came accross arrow functions which helped me stop the game once the game has finished. I also used arrow functions for my resetGame function and i added some know features to my getRandomImages function.
 
-   ![More Page fifa trailer](assets/css/images/more-fifa-trailer.PNG)
-* More page content 
-   + The more page expands content related to the home page. This section focuses on features in the game.
-   + I have made the content easy to read by changing the font size and color of my content so that it stands out from the background. 
-   + I made the colors a little different than the home page because I wanted to separate the two pages apart. 
-   ![More Page Content](assets/css/images/more-page-content.PNG)
-   *** 
-* Sign-Up Page
-   + The sign-up page is intended to be used to join a community of people that talk about FIFA and the user also gets an option to get news (updates) about the game.
-   + If a user wants to sign up they need to write their First name, last name, and their email (all of this information is required). They also have to check the yes or no option which is also required to sign up.
-   + The sign-up form is valuable to the user if they want more information and updates about the game which will not be shown on the website. 
-   ![Sign up form](assets/css/images/sign-up-form.PNG)
-   ***
-* Footer
-   +  I used my footer as a way to create my contact page. Inside my footer, there are 4 social media links which the user can click.
-   + In big text, I have written 'Reach out and contact us here to let the user know where to go if they want to contact us. 
-   + I put a line of text underneath the header of the footer to let the user know where to go if they want to read more information about the game's features.
- 
+   + I have confirmed that all my content is easily usable to the user by showing my website to someone else.
+   + I have tested my website in different browser's such as: Microsft Edge, Chrome and Firefox.
 
-    ![Footer image](assets/css/images/footer-image.PNG)
-    ## Testing
-   + I have tested the sign-up form and I have confirmed that the button and link work, you need an email for the email input and all inputs are set to require. 
-   + I have confirmed that all the icons and font work.
-   + I have confirmed that all my content is easily readable to the user by showing my website to someone else.
-   + I have confirmed that my video is fully controllable and that it fully works like it's supposed to.
-   + I have tested my website in different browser's such as: Microsft Edge, Chrome, Firefox.
    **Bugs** 
-* Solved Bugs
-   + I had an issue with adding the FIFA video to my website, later I found out with some help from code institute's Tutor assistance that it was my link and I didn't embed it before adding it to my code. 
-   + I had an issue with the display: inline; it wouldn't work properly but I figured it out and margined the home content till it was level.
+* UnSolved Bugs
+   + The getRandomFunction randomizes the images but it dose not garintee that all bell icons will load, thats because the getRandommImages function only randomizes the images but dose not pick a set number before it randomizes the images a thus some images will not in cirtain times you play. 
+   + The user can just keep on clicking on one div and that will count as if the user clicked on different divs, this is because the div dose not save the the current choice 
    *** 
 **Validator Testing**
 * HTML
