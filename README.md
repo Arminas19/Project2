@@ -1,10 +1,14 @@
 # Match 3 Bells To Win
 
-The purpose of the Fifa 22 website was to advertise the FIFA video game, the advertisement was meant to be for viewers in their teens and under to represent the game's age group.
-When a user visit's the home page, they will see a navigation menu, a big FIFA 22 picture, and a side box with the price for the game on it. It's intended to give the user more knowledge of where they are at.
+The purpose of this project is to showcase my javaScript skills and i did that by making my 
+'Match 3 to win game'. This project aims to accomplish a click function for when the user clicks on a div. What happens is that 
+the image is shown and that image is registered to see if that image is a bell icon. Once the user get's 3 bell 
+icons or losses by getting 3 wrong guesses a function is called to calculate the answer and determin 
+if the user get's a win point or a loss point. After the game is finished the user will have a reset button to press
+which reset's the images and the player can play again. 
 
-![Home Page](assets/images/Maching game.PNG)
-
+![Home Page](assets/images/Matching game.PNG)
+![Home Page](assets/images/Matching game2.PNG)
 ## Features 
 
 * Navigation menu
