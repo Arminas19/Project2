@@ -1,4 +1,3 @@
-/* Alert pop-up when ever the user loads or reloads the page.*/
 alert(" ⓘ How To Play  ★ Match 3 bell Icons to get a win, Once the game is complete press the Reset button to start again. If you guess an incorrect icon you loss.");
 /*  Once the browser is fully loaded this functtion is called: The purpose of this function is to capture where the user clicked,
 their are currently 2 options. 
@@ -10,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         div.addEventListener("click", function (event) {
             
-            getRandomImage(this)
-            calculateAnswer(event.target)
-        })
+            getRandomImage(this);
+            calculateAnswer(event.target);
+        });
     }
     let resetButton = document.getElementById("reset-button");
     resetButton.addEventListener("click", resetButton);
@@ -32,7 +31,7 @@ let image_Array = [
     'assets/images/lemon (1).png',
     'assets/images/orange (1).png',
     'assets/images/watermelon (1).png'
-]
+];
 
 function getRandomImage(imageDiv) {
    
@@ -40,7 +39,7 @@ function getRandomImage(imageDiv) {
 
     random_index = Math.floor(Math.random() * image_Array.length);
 
-    selectedImage = image_Array[random_index]
+    selectedImage = image_Array[random_index];
 
     //let imagesArray = document.getElementsByClassName('image-div').src = `../assets/css/images/${selectedImage}`
     let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
@@ -71,13 +70,13 @@ function calculateAnswer(element) {
     
     //let img = document.getElementsByTagName('img')[this].src;
 
-    console.log(element)
-    console.log(window.getComputedStyle(element, null).backgroundImage)
+    console.log(element);
+    console.log(window.getComputedStyle(element, null).backgroundImage);
 
-    console.log('This is the element ' + element.style.backgroundImage)
+    console.log('This is the element ' + element.style.backgroundImage);
    // let imgsrc = document.getElementsByTagName("img").src;
 
-    let switchUrl = 'url("assets/images/bell (1).png")'
+    let switchUrl = 'url("assets/images/bell (1).png")';
     
     switch (element.style.backgroundImage) {
         case switchUrl:
@@ -129,94 +128,93 @@ function calculateAnswer(element) {
 
 
 function playerHasWon() {
-alert('You Won!!');
-
-let win = parseInt(document.getElementById('win').innerText);
-document.getElementById('win').innerText = ++win; 
-
-getRandomImage = (imageDiv) => {
-let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
-imagesArray.style.backgroundImage = undefined;
-}
-
-calculateAnswer = () => {
-
-}
-
-}
-
-
-function playerHasLost() {
-alert(' You Lost :( ');
-
-let loss = parseInt(document.getElementById('loss').innerText);
-document.getElementById('loss').innerText = ++loss; 
-
-getRandomImage = (imageDiv) => {
-let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
-imagesArray.style.backgroundImage = undefined;
-   }
-calculateAnswer = () => {
-
-}
-
-}
-
-
- 
-function resetButton() {
-    alert('resetButton function has been activated');
-    resetGame();
-   
-}
-function resetGame(){
+    alert('You Won!!');
+    
+    let win = parseInt(document.getElementById('win').innerText);
+    document.getElementById('win').innerText = ++win; 
+    
     getRandomImage = (imageDiv) => {
-        
-
-        random_index = Math.floor(Math.random() * image_Array.length);
-
-        selectedImage = image_Array[random_index]
+    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+    imagesArray.style.backgroundImage = undefined;
+    };
     
-        
-        let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
-        imagesArray.style.backgroundImage = `url('${selectedImage}')`;
-        }
-
-        let bell = 0;
-        let failedAttempt = 0;
-
-        calculateAnswer = (element) => {
-            console.log(element)
-    console.log(window.getComputedStyle(element, null).backgroundImage)
-
-    console.log('This is the element ' + element.style.backgroundImage)
-  
-
-    let switchUrl = 'url("assets/images/bell (1).png")'
+    calculateAnswer = () => {
     
-    switch (element.style.backgroundImage) {
-        case switchUrl:
-            bell += 1;
-            alert(`You Found ${bell} bell icons`);
-            
-            break;
-        case  !switchUrl:
-          
-            break;
-        default:
-            failedAttempt += 1;
-            alert(`You have ${failedAttempt}/3 trys left`);
-            console.log('Unkown Error');
-            break;
+    };
+    
     }
-    console.log('This is the bell ' + bell);
-    console.log('This is the failed Attemts ' + failedAttempt);
-   
-            if(bell === 3){
-                playerHasWon();
-            }
-            if(failedAttempt === 3){
-                playerHasLost();
-            }
+    
+    
+    function playerHasLost() {
+    alert(' You Lost :( ');
+    
+    let loss = parseInt(document.getElementById('loss').innerText);
+    document.getElementById('loss').innerText = ++loss; 
+    
+    getRandomImage = (imageDiv) => {
+    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+    imagesArray.style.backgroundImage = undefined;
+       };
+    calculateAnswer = () => {
+    
+    };
+    }
+    
+    
+     
+    function resetButton() {
+        alert('resetButton function has been activated');
+        resetGame();
+       
+    }
+    function resetGame(){
+        getRandomImage = (imageDiv) => {
+            
+    
+            random_index = Math.floor(Math.random() * image_Array.length);
+    
+            selectedImage = image_Array[random_index];
+        
+            
+            let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+            imagesArray.style.backgroundImage = `url('${selectedImage}')`;
+            };
+    
+            let bell = 0;
+            let failedAttempt = 0;
+    
+            calculateAnswer = (element) => {
+                console.log(element);
+        console.log(window.getComputedStyle(element, null).backgroundImage);
+    
+        console.log('This is the element ' + element.style.backgroundImage);
+      
+    
+        let switchUrl = 'url("assets/images/bell (1).png")';
+        
+        switch (element.style.backgroundImage) {
+            case switchUrl:
+                bell += 1;
+                alert(`You Found ${bell} bell icons`);
+                
+                break;
+            case  !switchUrl:
+              
+                break;
+            default:
+                failedAttempt += 1;
+                alert(`You have ${failedAttempt}/3 trys left`);
+                console.log('Unkown Error');
+                break;
         }
-}
+        console.log('This is the bell ' + bell);
+        console.log('This is the failed Attemts ' + failedAttempt);
+       
+                if(bell === 3){
+                    playerHasWon();
+                }
+                if(failedAttempt === 3){
+                    playerHasLost();
+                }
+            };
+    }

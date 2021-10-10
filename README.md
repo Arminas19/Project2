@@ -62,31 +62,29 @@ which reset's the images and the player can play again.
    **Bugs** 
 * UnSolved Bugs
    + The getRandomFunction randomizes the images but it dose not garintee that all bell icons will load, thats because the getRandommImages function only randomizes the images but dose not pick a set number before it randomizes the images a thus some images will not in cirtain times you play. 
-   + The user can just keep on clicking on one div and that will count as if the user clicked on different divs, this is because the div dose not save the the current choice 
+   + The user can just keep on clicking on one div and that will count as if the user clicked on different divs, this is because the div dose not save the the current choice of a randm image so it can't set it.
    *** 
 **Validator Testing**
 * HTML
-   + No errors or warnings were found for all pages - index More or sign-up.
+   + Getting an Error for my <img> tags but it is intended t be this way because with the scr and alt attributes the divs don't work properly. 
 * CSS 
-   + No errors were found but a warning with the contents of 'Imported style sheets are not checked indirect input and file upload modes' which doesn't relate to my CSS.
+   + No errors were found.
+* JavaScript
+   + Getting lost's of  Errors. mostly regarding  (use 'esversion: 6') or Mozilla JS extensions (use moz). 
 * Accessibility 
-   + I have checked lighthouse and confirmed that my website is easily accessible to users.
-   ![Lighthouse scores image](assets/css/images/Lighthouse.PNG)
-**Unfixed Bugs** 
-   + I can't move my iframe video to the left, I tried margin, padding, and floats but the only thing that worked was a one line style but the problem is that I cant use @media on it to set height and width, just couldn't connect my CSS to this element. 
-   + If I had more time I would try and make this website a bit more responsive. 
+   + I have checked lighthouse, Theys are my results.
+   ![Lighthouse scores image](assets/images/lighthouse.PNG)
    ***
    ## Development
-* My website was deployed on GitHub pages, they are the steps I took:
+* My website was deployed on GitHub pages, they's are the steps I took:
    + In GitHub repository, I navigated to settings. 
    + I scrolled down to pages, I clicked on the link. 
    + In the source drop-down menu, I selected my branch as - main, and then I got the link to my website. 
-   * Here is the link to my website - https://arminas19.github.io/Project1/ 
+   * Here is the link to my website - https://arminas19.github.io/Project2/ 
  ### Credits 
    **Content** 
-   + I took Some of the code from the sign-up form the Love Running Project or 'Challenge'. 
-   + I had some inspiration from the links and active class from the Love Running Project, but I didn't copy and paste I just wrote it myself.
+   + I Got some help from my mentor and tutor's . 
+   + I got some help from this youtube tutorial, here is the link - https://www.youtube.com/watch?v=1YjybCS4B2U.
+   + i got my images from Google. 
 **Media**
-   +  I copy and Pasted some text from the officially EA Fifa 22 website - here is their link: https://www.ea.com/en-gb/games/fifa/fifa-22.
-   + All my images were taken from this link: https://www.bing.com/images/search?q=fifa+22&form=HDRSC3&first=1&tsc=ImageHoverTitle.  
-   + I also used google fonts and icons - link for that: https://fontawesome.com/v5.15/icons/comments?style=solid.
+   + i got my images from Google. here is the link - https://www.bing.com/images/search?q=gambling%20%20icons&qs=n&form=QBIR&sp=-1&pq=gambling%20icons&sc=5-14&cvid=4A9872BAFBCF41259641C7604A5FBECC&first=1&tsc=ImageBasicHover
