@@ -10,7 +10,8 @@ body{
     margin-top: 120px;
     
 }
-/*  The div that holds every other div together and also it's children div's + reset button */
+/*  The div that holds every other div together (The parent div) and also children div's + reset button that resets the game
+ and also the img tag is styled here too. */
 #parent-div{
     width: 820px;
     height: 800px;
@@ -43,7 +44,7 @@ width: 300px;
 height: 80px;
 
 }
-/*  The Sores Header underneat the game*/
+/*  The Sores Header underneat the game and reset button*/
 #header-2{
     margin-top: 150px;
     font-size: 80px;
@@ -51,13 +52,14 @@ height: 80px;
     color: white;
     border-bottom: blanchedalmond 2px solid ;
 }
-/*  The div that brings thescores to the middle */
+/*  The div that brings the scores to the middle */
 #middle{
     margin: auto;
     width: 700px;
     height: 100px;
     
 }
+/* Scores, The win and loss span tags  */
 .scores{
 display: inline;
 font-size: 50px;

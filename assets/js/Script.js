@@ -1,6 +1,6 @@
 alert(" ⓘ How To Play  ★ Match 3 bell Icons to get a win, Once the game is complete press the Reset button to start again. If you guess an incorrect icon you loss.");
 /*  Once the browser is fully loaded this functtion is called: The purpose of this function is to capture where the user clicked,
-their are currently 2 options. 
+their are currently 2 options. One for the reset button and the other one is for the getRandomImage function. 
 */
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -32,7 +32,7 @@ let image_Array = [
     'assets/images/orange (1).png',
     'assets/images/watermelon (1).png'
 ];
-
+/* This functions puropse is to set a random image inside the <img> tag */
 function getRandomImage(imageDiv) {
    
     // alert('getRandomImage function has been activated');
@@ -58,8 +58,8 @@ function getRandomImage(imageDiv) {
 
 /* 
 This function gets the <img> src value from the DOM and checks if that value is the bell icon's url,
-Once the a bell icon's url is found, the let bell = 0 icon increase and once it get's to 3 it calles the player has won function.
-if bell = 3 never arrives the player has lost function is called.
+Once the bell icon's url is found, the let bell = 0 icon increase and once it get's to 3 it calles the player has won function.
+if failedAttempt = 3 than the playerHasLost function is called.
 */
 //let bell = 0;
 let bell = 0;
@@ -126,7 +126,8 @@ function calculateAnswer(element) {
 
 
 
-
+/* This function is called when the player has guessed 3 bell icons, The purpose of the arrow functions is to stop the game
+from being played by setting the images.style.backgroundImage to undifined and leaving the calculateAnswer function empty. */
 function playerHasWon() {
     alert('You Won!!');
     
@@ -144,7 +145,8 @@ function playerHasWon() {
     
     }
     
-    
+    /* This function is the same like the playerHasWon function but inseade of incresing the won span tag 
+    this is incressing the loss span tag. */
     function playerHasLost() {
     alert(' You Lost :( ');
     
@@ -161,7 +163,8 @@ function playerHasWon() {
     }
     
     
-     
+     /* I use the resetButton and the resetGame functions too reset the images and to start the game over but in the same time
+     leave the scores just like they where before. */
     function resetButton() {
         alert('resetButton function has been activated');
         resetGame();
