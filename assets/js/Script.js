@@ -41,8 +41,11 @@ function getRandomImage(imageDiv) {
     selectedImage = image_Array[random_index];
 
     //let imagesArray = document.getElementsByClassName('image-div').src = `../assets/css/images/${selectedImage}`
-    let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+    let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
     imagesArray.style.backgroundImage = `url('${selectedImage}')`;
+
+    image_Array.splice(random_index, 1);
+    console.log(image_Array);
     // calculateAnswer();
     // for(let i = 0; i < imagesArray.length; i++){
 
@@ -62,7 +65,7 @@ if failedAttempt = 3 than the playerHasLost function is called.
 */
 //let bell = 0;
 let bell = 0;
-let failedAttempt = 0;
+let failedAttempt = 4;
 
 function calculateAnswer(element) {
     console.log('You have made it to calculateAnswer');
@@ -89,18 +92,17 @@ function calculateAnswer(element) {
             // alert(`You have ${failedAttempt}/3 trys left`);
             break;
         default:
-            failedAttempt += 1;
-            alert(`You have ${failedAttempt}/3 trys left`);
-            console.log('Unkown Error');
+            failedAttempt -= 1;
+            alert(`You have ${failedAttempt} lives left`);
+
             break;
     }
-    console.log('This is the bell ' + bell);
-    console.log('This is the failed Attemts ' + failedAttempt);
+
 
     if (bell === 3) {
         playerHasWon();
     }
-    if (failedAttempt === 3) {
+    if (failedAttempt === 0) {
         playerHasLost();
     }
     /* if(img === `url('assets/images/bell (1).png')`){
@@ -154,7 +156,7 @@ function playerHasLost() {
     document.getElementById('loss').innerText = ++loss;
 
     getRandomImage = (imageDiv) => {
-        let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+        let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = undefined;
     };
     calculateAnswer = () => {
@@ -172,10 +174,21 @@ function resetButton() {
 }
 
 function resetGame() {
+
+    image_Array = [
+        'assets/images/bell (1).png',
+        'assets/images/bell (1).png',
+        'assets/images/bell (1).png',
+        'assets/images/cherry (1).png',
+        'assets/images/cherry (1).png',
+        'assets/images/lemon (1).png',
+        'assets/images/lemon (1).png',
+        'assets/images/orange (1).png',
+        'assets/images/watermelon (1).png'
+    ];
+
     getRandomImage = (imageDiv) => {
 
-        let newimagesArray = imageDiv.getElementsByClassName('image-div')[0];
-        newimagesArray.style = null;
 
 
 
@@ -184,18 +197,21 @@ function resetGame() {
         selectedImage = image_Array[random_index];
 
 
-        let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
+        imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = `url('${selectedImage}')`;
+
+        image_Array.splice(random_index, 1);
+        console.log(image_Array);
     };
 
     bell = 0;
-    failedAttempt = 0;
+    failedAttempt = 4;
 
     calculateAnswer = (element) => {
         console.log(element);
         console.log(window.getComputedStyle(element, null).backgroundImage);
 
-        console.log('This is the element ' + element.style.backgroundImage);
+
 
 
         let switchUrl = 'url("assets/images/bell (1).png")';
@@ -210,18 +226,17 @@ function resetGame() {
 
                 break;
             default:
-                failedAttempt += 1;
-                alert(`You have ${failedAttempt}/3 trys left`);
+                failedAttempt -= 1;
+                alert(`You have ${failedAttempt} Lives left`);
                 console.log('Unkown Error');
                 break;
         }
-        console.log('This is the bell ' + bell);
-        console.log('This is the failed Attemts ' + failedAttempt);
+
 
         if (bell === 3) {
             playerHasWon();
         }
-        if (failedAttempt === 3) {
+        if (failedAttempt === 0) {
             playerHasLost();
         }
     };
