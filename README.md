@@ -43,7 +43,7 @@ which reset's the images and the player can play again.
 *** 
 
 **Features Left to Implement**
- * header + footer + javaScrit
+ * header + footer + JavaScript
    + If I had more time I would like to style my page a bit more and polish it (make the header nicer).
    + I will add a footer in my spare time to make this look more complete. 
    + I want to add a function where the user will have a pop-up when they win or lose. 
