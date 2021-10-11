@@ -189,7 +189,13 @@ function resetGame() {
 
     getRandomImage = (imageDiv) => {
 
+        let imagesArray = imageDiv.getElementsByClassName('image-container');
 
+        for (let i = 0; i < imagesArray.length; i++) {
+
+            imagesArray = imageDiv.getElementsByClassName('image-container')[i];
+            imagesArray.style = null;
+        }
 
 
         random_index = Math.floor(Math.random() * image_Array.length);
