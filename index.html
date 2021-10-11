@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/35936358ad.js" crossorigin="anonymous"></script>
-    <link href="assets/css/style.css" rel="Stylesheet"> 
+    <link href="assets/css/style.css" rel="Stylesheet">
     <title>Match 3 Bells To Win</title>
 </head>
+
 <body>
-    <h1 id="main-header">  Match 3 <i class="fas fa-bell"></i> <br>To Win!! </h1> 
-<div id="parent-div"> 
-    <!-- I didn't use the alt attribute on the img tag because it messed up the position for the div -->
-    <div  data-type="div1-9" class="div-children" id="div1"> 
-        <img class="image-div">
+    <h1 id="main-header"> Match 3 <i class="fas fa-bell"></i> <br>To Win!! </h1>
+    <div id="parent-div">
+        <!-- I didn't use the alt attribute on the img tag because it messed up the position for the div -->
+        <div data-type="div1-9" class="div-children">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="div-children">
+            <img class=" image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+        <div data-type="div1-9" class="Game-container">
+            <img class="image-div">
+        </div>
+
+        <button data-type="submit" type="submit" id="reset-button" onclick="resetButton()"> Reset Game </button>
     </div>
-    <div data-type="div1-9" class="div-children" id="div2"> 
-        <img class="image-div" >
+    <h1 id="header-2"> Scores </h1>
+    <div id="middle">
+        <p class="scores"> WON: <span id="win"> 0 </span> </p>
+        <p class="scores"> LOSS: <span id="loss"> 0</span> </p>
     </div>
-    <div data-type="div1-9" class="div-children" id="div3"> 
-        <img class="image-div" >
-    </div>
-    <div data-type="div1-9" class="div-children" id="div4"> 
-        <img class="image-div">
-    </div>
-    <div data-type="div1-9" class="div-children" id="div5"> 
-        <img class="image-div">
-    </div>
-    <div data-type="div1-9" class="div-children" id="div6"> 
-        <img class="image-div">
-    </div> 
-    <div data-type="div1-9" class="div-children" id="div7"> 
-        <img class="image-div">
-    </div>
-    <div data-type="div1-9" class="div-children" id="div8"> 
-        <img class="image-div">
-    </div>
-    <div  data-type="div1-9" class="div-children" id="div9"> 
-        <img class="image-div">
-    </div>
- 
-    <button data-type="submit" type = "submit" id="reset-button" onclick="resetButton()"> Reset Game </button>
-</div>
-<h1 id="header-2"> Scores </h1> 
-<div id="middle"> 
-    <p class="scores"> WON: <span id="win"> 0 </span> </p>
-    <p class="scores"> LOSS: <span id="loss"> 0</span> </p>
-</div>
     <script src="assets/js/Script.js">
 
     </script>
 </body>
+
 </html>

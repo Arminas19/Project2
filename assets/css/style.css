@@ -1,25 +1,28 @@
-body{
+body {
     background-color: burlywood;
 }
+
 /* The main header the user see's when entering the page.*/
-#main-header{
+#main-header {
     margin: auto;
     font-size: 90px;
     color: crimson;
     text-align: center;
     margin-top: 120px;
-    
+
 }
+
 /*  The div that holds every other div together (The parent div) and also children div's + reset button that resets the game
  and also the img tag is styled here too. */
-#parent-div{
+#parent-div {
     width: 820px;
     height: 800px;
     background-color: rgb(221, 79, 23);
-   margin-bottom: 400px;
-   margin: auto;
+    margin-bottom: 400px;
+    margin: auto;
 }
-.div-children{
+
+.Game-container {
     width: 200px;
     height: 200px;
     background-color: cornsilk;
@@ -28,67 +31,76 @@ body{
     margin-left: 50px;
     margin-top: 50px;
 }
-.image-div{
-width: 100%;
-height: 100%;
-background-color: cornsilk;
+
+.image-div {
+    width: 100%;
+    height: 100%;
+    background-color: cornsilk;
 }
-#reset-button{
-font-size: 50px;
-margin-left: 260px;
-margin-top: 20px;
-border-radius: 20px;
-color: red;
-background-color: blanchedalmond;
-width: 300px;
-height: 80px;
+
+#reset-button {
+    font-size: 50px;
+    margin-left: 260px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: red;
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 80px;
 
 }
+
 /*  The Sores Header underneat the game and reset button*/
-#header-2{
+#header-2 {
     margin-top: 150px;
     font-size: 80px;
     text-align: center;
     color: white;
-    border-bottom: blanchedalmond 2px solid ;
+    border-bottom: blanchedalmond 2px solid;
 }
+
 /*  The div that brings the scores to the middle */
-#middle{
+#middle {
     margin: auto;
     width: 700px;
     height: 100px;
-    
+
 }
+
 /* Scores, The win and loss span tags  */
-.scores{
-display: inline;
-font-size: 50px;
-color: rgb(255, 255, 255);
+.scores {
+    display: inline;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
 
-margin-left: 120px;
+    margin-left: 120px;
 
 
 }
-#win{
+
+#win {
     color: rgb(61, 252, 61);
 }
-#loss{
+
+#loss {
     color: red;
 }
+
 /* Media Querries!! */
 
-@media screen and (max-width: 549px ) {
-    #main-header{
+@media screen and (max-width: 549px) {
+    #main-header {
         margin: auto;
         font-size: 70px;
         color: crimson;
         text-align: center;
         margin-top: 120px;
-        margin-left: 150px; ;
-        
+        margin-left: 150px;
+        ;
+
     }
 
-    #header-2{
+    #header-2 {
         margin-top: 150px;
         margin-left: 150px;
         position: relative;
@@ -99,45 +111,46 @@ margin-left: 120px;
     }
 }
 
-@media screen and (max-width: 431px ) {
-    #main-header{
-      
+@media screen and (max-width: 431px) {
+    #main-header {
+
         font-size: 50px;
         color: crimson;
         text-align: center;
         margin-top: 120px;
-        margin-left: 200px; ;
-        
+        margin-left: 200px;
+        ;
+
     }
 
-    #header-2{
+    #header-2 {
         margin-top: 150px;
         margin-left: 150px;
         font-size: 60px;
         text-align: center;
         color: white;
-        border-bottom: blanchedalmond 2px solid ;
+        border-bottom: blanchedalmond 2px solid;
     }
 }
 
-@media screen and (max-width: 399px ) {
-    #main-header{
-      
+@media screen and (max-width: 399px) {
+    #main-header {
+
         font-size: 40px;
         color: crimson;
         text-align: center;
         margin-top: 120px;
-        margin-left: 150px; 
-       
-        
+        margin-left: 150px;
+
+
     }
 
-    #header-2{
+    #header-2 {
         margin-top: 150px;
-        margin-left: 150px ;
+        margin-left: 150px;
         font-size: 60px;
         text-align: center;
         color: white;
-        border-bottom: blanchedalmond 2px solid ;
+        border-bottom: blanchedalmond 2px solid;
     }
 }
