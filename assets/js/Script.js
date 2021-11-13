@@ -80,10 +80,25 @@ function calculateAnswer(element) {
         case !switchUrl:
             break;
         default:
-            failedAttempt -= 1;
-            alert(`You have ${failedAttempt} lives left`);
+            if (failedAttempt > 2) {
+                failedAttempt -= 1
+                alert(`You have ${failedAttempt} lives left`);
+            } else if (failedAttempt == 2) {
+                failedAttempt -= 1
+                alert('last life left')
 
+            } else {
+                alert('You have 0 lives left')
+                failedAttempt -= 1
+
+            }
             break;
+
+
+            //failedAttempt -= 1;
+            //alert(`You have ${failedAttempt} lives left`);
+
+
     }
 
 
@@ -206,9 +221,18 @@ function resetGame() {
 
                 break;
             default:
-                failedAttempt -= 1;
-                alert(`You have ${failedAttempt} Lives left`);
-                console.log('Unkown Error');
+                if (failedAttempt > 2) {
+                    failedAttempt -= 1
+                    alert(`You have ${failedAttempt} lives left`);
+                } else if (failedAttempt == 2) {
+                    failedAttempt -= 1
+                    alert('last life left')
+
+                } else {
+                    alert('You have 0 lives left')
+                    failedAttempt -= 1
+
+                }
                 break;
         }
 
