@@ -159,20 +159,23 @@ function playerHasLost() {
 leave the scores just like they where before. */
 function resetButton() {
     let imagesArray = document.getElementsByClassName('image-container');
+    //imageDiv.classList.remove("toggled");
 
     for (let i = 0; i < imagesArray.length; i++) {
 
         imagesArray[i].style = null;
 
 
+
+
     }
     alert('resetButton function has been activated');
+
     resetGame();
 
 }
 
 function resetGame() {
-
     image_Array = [
         'assets/images/bell (1).png',
         'assets/images/bell (1).png',
