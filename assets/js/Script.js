@@ -63,11 +63,8 @@ function calculateAnswer(element) {
 
 
 
-    console.log(element);
-    console.log(window.getComputedStyle(element, null).backgroundImage);
-
-    console.log('This is the element ' + element.style.backgroundImage);
-
+    element;
+    window.getComputedStyle(element, null).backgroundImage;
 
     let switchUrl = 'url("assets/images/bell (1).png")';
 
@@ -196,15 +193,15 @@ function resetGame() {
         imagesArray.style.backgroundImage = `url('${selectedImage}')`;
 
         image_Array.splice(random_index, 1);
-        console.log(image_Array);
+
     };
 
     bell = 0;
     failedAttempt = 4;
 
     calculateAnswer = (element) => {
-        console.log(element);
-        console.log(window.getComputedStyle(element, null).backgroundImage);
+        element;
+        window.getComputedStyle(element, null).backgroundImage;
 
 
 
