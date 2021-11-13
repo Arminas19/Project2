@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         div.addEventListener("click", function(event) {
 
-            getRandomImage(this);
-            calculateAnswer(event.target);
+            if (getRandomImage(this)) {
+
+                calculateAnswer(event.target);
+            }
+
         });
     }
     let resetButton = document.getElementById("reset-button");
@@ -33,7 +36,9 @@ let image_Array = [
 ];
 /* This functions puropse is to set a random image inside the <img> tag */
 function getRandomImage(imageDiv) {
-
+    if (imageDiv.classList.contains("toggled")) {
+        return false;
+    }
 
 
     random_index = Math.floor(Math.random() * image_Array.length);
@@ -42,8 +47,9 @@ function getRandomImage(imageDiv) {
 
     let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
     imagesArray.style.backgroundImage = `url('${selectedImage}')`;
-
+    imageDiv.classList.add("toggled")
     image_Array.splice(random_index, 1);
+    return true;
 
 }
 
@@ -181,7 +187,9 @@ function resetGame() {
 
     getRandomImage = (imageDiv) => {
 
-
+        if (imageDiv.classList.contains("toggled")) {
+            return false;
+        }
 
 
         random_index = Math.floor(Math.random() * image_Array.length);
@@ -191,8 +199,11 @@ function resetGame() {
 
         imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = `url('${selectedImage}')`;
+        imageDiv.classList.add("toggled")
 
         image_Array.splice(random_index, 1);
+
+        return true
 
     };
 
