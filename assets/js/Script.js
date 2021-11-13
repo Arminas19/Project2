@@ -34,26 +34,17 @@ let image_Array = [
 /* This functions puropse is to set a random image inside the <img> tag */
 function getRandomImage(imageDiv) {
 
-    // alert('getRandomImage function has been activated');
+
 
     random_index = Math.floor(Math.random() * image_Array.length);
 
     selectedImage = image_Array[random_index];
 
-    //let imagesArray = document.getElementsByClassName('image-div').src = `../assets/css/images/${selectedImage}`
     let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
     imagesArray.style.backgroundImage = `url('${selectedImage}')`;
 
     image_Array.splice(random_index, 1);
-    console.log(image_Array);
-    // calculateAnswer();
-    // for(let i = 0; i < imagesArray.length; i++){
 
-    //     if (imagesArray.background = `url('+${selectedImage}+')`) {
-    //     } else {
-    //         this.style.backgroundColor = "cornsilk";
-    //     }
-    // }
 }
 
 
@@ -63,7 +54,6 @@ This function gets the <img> src value from the DOM and checks if that value is 
 Once the bell icon's url is found, the let bell = 0 icon increase and once it get's to 3 it calles the player has won function.
 if failedAttempt = 3 than the playerHasLost function is called.
 */
-//let bell = 0;
 let bell = 0;
 let failedAttempt = 4;
 
@@ -71,13 +61,13 @@ function calculateAnswer(element) {
     console.log('You have made it to calculateAnswer');
 
 
-    //let img = document.getElementsByTagName('img')[this].src;
+
 
     console.log(element);
     console.log(window.getComputedStyle(element, null).backgroundImage);
 
     console.log('This is the element ' + element.style.backgroundImage);
-    // let imgsrc = document.getElementsByTagName("img").src;
+
 
     let switchUrl = 'url("assets/images/bell (1).png")';
 
@@ -88,8 +78,6 @@ function calculateAnswer(element) {
 
             break;
         case !switchUrl:
-            // failedAttempt += 1;
-            // alert(`You have ${failedAttempt}/3 trys left`);
             break;
         default:
             failedAttempt -= 1;
@@ -105,22 +93,6 @@ function calculateAnswer(element) {
     if (failedAttempt === 0) {
         playerHasLost();
     }
-    /* if(img === `url('assets/images/bell (1).png')`){
-         ++bell;
-         
-         console.log(bell);
-         return bell;
-     }else{
-         conosle.log('This image wasnt the bell icon.')
-     }
- 
-     if( bell === 3){
-   console.log('The player won')
-     }
-     else{
-         console.log('The player lost')
-     }
-     */
 
 }
 
