@@ -88,6 +88,6 @@ which reset's the images and the player can play again.
 **Updated Patch**
 * Now instead of an Alert with the rules written there, You get a section with the rules so that the user can also remind themself's of how to play the game. 
 * I added more specific alert's when it comes to how many lives does the user have.
-* * I fixed the mobile screen problem by adding a div that surrounds the title so that the title is contained in a smaller section.  
+* I fixed the mobile screen problem by adding a div that surrounds the title so that the title is contained in a smaller section.  
 * I removed console.log's from my code
 * I updated the image-container divs so that the user can only click the box once. 
