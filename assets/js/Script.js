@@ -157,12 +157,14 @@ function playerHasLost() {
 
 /* I use the resetButton and the resetGame functions too reset the images and to start the game over but in the same time
 leave the scores just like they where before. */
-function resetButton() {
-    let imagesArray = document.getElementsByClassName('image-container');
-    //imageDiv.classList.remove("toggled");
+function resetButton(imageDiv) {
+    let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
+
 
     for (let i = 0; i < imagesArray.length; i++) {
 
+
+        imageDiv[i].classList.remove("toggled");
         imagesArray[i].style = null;
 
 
