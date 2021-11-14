@@ -2,6 +2,44 @@ body {
     background-color: burlywood;
 }
 
+/* Rules section */
+#wrapper {
+
+    width: 100%;
+    height: 300px;
+
+
+}
+
+#rules-h2 {
+    width: 50%;
+    height: 30%;
+    background-color: navy;
+
+    border: 3px solid white;
+    margin: auto;
+}
+
+#rules-h2 h2 {
+    font-size: 90px;
+    color: crimson;
+    margin: auto;
+    text-align: center;
+}
+
+#rules-p {
+    width: 50%;
+    height: 70%;
+    background-color: rgb(158, 35, 35);
+    border: 3px solid white;
+    margin: auto;
+}
+
+#rules-p p {
+    color: rgb(207, 202, 202);
+    font-size: 25px;
+}
+
 #title {
 
     margin: auto;
@@ -10,6 +48,7 @@ body {
     border: 6px solid black;
     background-color: white;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 /* The main header the user see's when entering the page.*/
@@ -28,8 +67,9 @@ body {
     width: 820px;
     height: 800px;
     background-color: rgb(221, 79, 23);
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     margin: auto;
+
 }
 
 .Game-container {
@@ -176,6 +216,7 @@ body {
         border: 6px solid black;
         background-color: white;
         margin-bottom: 20px;
+        margin-top: 50px;
     }
 
     /* The main header the user see's when entering the page.*/
@@ -199,6 +240,7 @@ body {
         border: 6px solid black;
         background-color: white;
         margin-bottom: 20px;
+        margin-top: 50px;
     }
 
     /* The main header the user see's when entering the page.*/
@@ -223,6 +265,7 @@ body {
         background-color: white;
         margin-bottom: 20px;
         margin-left: 200px;
+        margin-top: 50px;
     }
 
     /* The main header the user see's when entering the page.*/
@@ -234,9 +277,29 @@ body {
 
 
     }
+
+    #rules-h2 {
+        width: 60%;
+        height: 30%;
+        background-color: navy;
+
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+
+    #rules-p {
+        width: 60%;
+        height: 70%;
+        background-color: rgb(158, 35, 35);
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
 
     #title {
 
@@ -247,6 +310,7 @@ body {
         background-color: white;
         margin-bottom: 20px;
         margin-left: 250px;
+        margin-top: 50px;
     }
 
     /* The main header the user see's when entering the page.*/
@@ -258,9 +322,28 @@ body {
 
 
     }
+
+    #rules-h2 {
+        width: 100%;
+        height: 30%;
+        background-color: navy;
+
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+
+    #rules-p {
+        width: 100%;
+        height: 70%;
+        background-color: rgb(158, 35, 35);
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
 
     #title {
 
@@ -271,6 +354,7 @@ body {
         background-color: white;
         margin-bottom: 20px;
         margin-left: 300px;
+        margin-top: 50px;
     }
 
     /* The main header the user see's when entering the page.*/
@@ -281,5 +365,58 @@ body {
         text-align: center;
 
 
+
+    }
+
+    #rules-h2 {
+        width: 100%;
+        height: 30%;
+        background-color: navy;
+
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+
+    #rules-p {
+        width: 100%;
+        height: 80%;
+        background-color: rgb(158, 35, 35);
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    #rules-h2 {
+        width: 100%;
+        height: 30%;
+        background-color: navy;
+
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+
+    #rules-p {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(158, 35, 35);
+        border: 3px solid white;
+        margin: auto;
+        margin-left: 200px;
+    }
+
+    #title {
+
+        margin: auto;
+        width: 80%;
+        height: 40%;
+        border: 6px solid black;
+        background-color: white;
+        margin-bottom: 20px;
+        margin-left: 300px;
+        margin-top: 150px;
     }
 }

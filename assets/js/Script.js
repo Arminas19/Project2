@@ -1,4 +1,3 @@
-alert(" ⓘ How To Play  ★ Match 3 bell Icons to get a win, Once the game is complete press the Reset button to start again. If you guess an incorrect icon 4 times you loss.");
 /*  Once the browser is fully loaded this functtion is called: The purpose of this function is to capture where the user clicked,
 their are currently 2 options. One for the reset button and the other one is for the getRandomImage function. 
 */
