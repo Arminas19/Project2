@@ -109,6 +109,7 @@ body {
     border-bottom: blanchedalmond 2px solid;
 }
 
+
 /*  The div that brings the scores to the middle */
 #middle {
     margin: auto;
@@ -296,11 +297,21 @@ body {
         margin: auto;
         margin-left: 200px;
     }
-
+    #header-2 {
+        margin-top: 150px;
+        margin-left: 30px;
+        position: relative;
+        font-size: 60px;
+        text-align: center;
+        color: white;
+        border-bottom: blanchedalmond 2px solid;
+    }
 }
 
 @media screen and (max-width: 426px) {
-
+#wrapper{
+margin-left:10px ;
+}
     #title {
 
         margin: auto;
@@ -341,10 +352,27 @@ body {
         margin: auto;
         margin-left: 200px;
     }
+    #header-2-div{
+        width: 100%;
+        height: 100%;
+        margin-left: 260px;
+       
+    }
+    #header-2 {
+        margin-top: 150px;
+      margin-right: 1000px;
+        position: relative;
+        font-size: 80px;
+        
+        color: white;
+        border-bottom: blanchedalmond 5px solid;
+    }
 }
 
 @media screen and (max-width: 376px) {
-
+    #wrapper{
+        margin-left:50px ;
+        }
     #title {
 
         margin: auto;
@@ -389,6 +417,9 @@ body {
 }
 
 @media screen and (max-width: 321px) {
+    #wrapper{
+        margin-left:80px ;
+        }
     #rules-h2 {
         width: 100%;
         height: 30%;
