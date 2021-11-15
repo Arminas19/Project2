@@ -48,6 +48,7 @@ function getRandomImage(imageDiv) {
     imagesArray.style.backgroundImage = `url('${selectedImage}')`;
     imageDiv.classList.add("toggled")
     image_Array.splice(random_index, 1);
+    console.log(imageDiv)
     return true;
 
 }
@@ -156,20 +157,23 @@ function playerHasLost() {
 
 /* I use the resetButton and the resetGame functions too reset the images and to start the game over but in the same time
 leave the scores just like they where before. */
-function resetButton(imageDiv) {
-    let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
+function resetButton() {
+    let imagesArray = document.getElementsByClassName('image-container');
+    console.log(imagesArray)
 
 
     for (let i = 0; i < imagesArray.length; i++) {
-
-
-        imageDiv[i].classList.remove("toggled");
+        
         imagesArray[i].style = null;
-
-
-
-
     }
+
+    let images = document.getElementsByClassName('Game-container');
+    console.log(images)
+for(let i = 0; i < images.length; i++){
+    if (images[i].classList.contains("toggled")) {
+        images[i].classList.remove('toggled')
+    }
+}
     alert('resetButton function has been activated');
 
     resetGame();
