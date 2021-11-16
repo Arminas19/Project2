@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <!-- The wrapper is used sometimes to position the rule divs to the center. I use rules-h2 and rules-p to 
+    create a rules box instead of an alert pop-up that the user only sees one time. 
+    -->
     <div id='wrapper'>
         <div id="rules-h2">
             <h2> Rules</h2>
@@ -23,11 +26,12 @@
                 at the bottom of the screen in the score section.</p>
         </div>
     </div>
+     <!-- This is the Match 3 bell icon section or the main title for this Game. -->
     <div id='title'>
         <h1 id="main-header"> Match 3 <i class="fas fa-bell"></i> <br>To Win!! </h1>
     </div>
     <div id="parent-div">
-        <!-- I didn't use the alt attribute on the img tag because it messed up the position for the div -->
+        <!-- I didn't use the alt attribute on the img tag because it messed up the position for the divs on the screen. -->
         <div data-type="div1-9" class="Game-container">
             <img class="image-container">
         </div>
@@ -55,9 +59,16 @@
         <div data-type="div1-9" class="Game-container">
             <img class="image-container">
         </div>
-
+<!-- This button is used to reset the game by activating the onclick attribute 
+    that activates the resetButton function in my JavaScript file.
+    -->
         <button data-type="submit" type="submit" id="reset-button" onclick="resetButton()"> Reset Game </button>
     </div>
+    <!-- 
+        This is the Scores section of the page, this includes Scores Header and Won and Loss counters.
+        I use span elements to change the scores and class to style the Won and LOSS words and I use the div = 'middle' to position 
+        them.
+    -->
     <div id="header-2-div">
     <h1 id="header-2"> Scores </h1>
     </div>
@@ -65,6 +76,7 @@
         <p class="scores"> WON: <span id="win"> 0 </span> </p>
         <p class="scores"> LOSS: <span id="loss"> 0</span> </p>
     </div>
+    <!-- Source to my JavaScript file. -->
     <script src="assets/js/Script.js">
 
     </script>

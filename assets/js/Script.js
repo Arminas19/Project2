@@ -1,12 +1,10 @@
-/*  Once the browser is fully loaded this functtion is called: The purpose of this function is to capture where the user clicked,
-their are currently 2 options. One for the reset button and the other one is for the getRandomImage function. 
-*/
-document.addEventListener("DOMContentLoaded", function() {
+/*jshint esversion: 6 */
+document.addEventListener("DOMContentLoaded", function () {
 
     let divs = document.getElementsByClassName("Game-container");
     for (div of divs) {
 
-        div.addEventListener("click", function(event) {
+        div.addEventListener("click", function (event) {
 
             if (getRandomImage(this)) {
 
@@ -46,9 +44,8 @@ function getRandomImage(imageDiv) {
 
     let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
     imagesArray.style.backgroundImage = `url('${selectedImage}')`;
-    imageDiv.classList.add("toggled")
+    imageDiv.classList.add("toggled");
     image_Array.splice(random_index, 1);
-    console.log(imageDiv)
     return true;
 
 }
@@ -84,22 +81,22 @@ function calculateAnswer(element) {
             break;
         default:
             if (failedAttempt > 2) {
-                failedAttempt -= 1
+                failedAttempt -= 1;
                 alert(`You have ${failedAttempt} lives left`);
             } else if (failedAttempt == 2) {
-                failedAttempt -= 1
-                alert('last life left')
+                failedAttempt -= 1;
+                alert('last life left');
 
             } else {
-                alert('You have 0 lives left')
-                failedAttempt -= 1
+                alert('You have 0 lives left');
+                failedAttempt -= 1;
 
             }
             break;
 
 
-            //failedAttempt -= 1;
-            //alert(`You have ${failedAttempt} lives left`);
+        //failedAttempt -= 1;
+        //alert(`You have ${failedAttempt} lives left`);
 
 
     }
@@ -126,12 +123,12 @@ function playerHasWon() {
     let win = parseInt(document.getElementById('win').innerText);
     document.getElementById('win').innerText = ++win;
 
-    getRandomImage = (imageDiv) => {
+    var getRandomImage = (imageDiv) => {
         let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
         imagesArray.style.backgroundImage = undefined;
     };
 
-    calculateAnswer = () => {
+    var calculateAnswer = () => {
 
     };
 
@@ -145,11 +142,11 @@ function playerHasLost() {
     let loss = parseInt(document.getElementById('loss').innerText);
     document.getElementById('loss').innerText = ++loss;
 
-    getRandomImage = (imageDiv) => {
+    var getRandomImage = (imageDiv) => {
         let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = undefined;
     };
-    calculateAnswer = () => {
+    var calculateAnswer = () => {
 
     };
 }
@@ -159,21 +156,18 @@ function playerHasLost() {
 leave the scores just like they where before. */
 function resetButton() {
     let imagesArray = document.getElementsByClassName('image-container');
-    console.log(imagesArray)
-
 
     for (let i = 0; i < imagesArray.length; i++) {
-        
+
         imagesArray[i].style = null;
     }
 
     let images = document.getElementsByClassName('Game-container');
-    console.log(images)
-for(let i = 0; i < images.length; i++){
-    if (images[i].classList.contains("toggled")) {
-        images[i].classList.remove('toggled')
+    for (let i = 0; i < images.length; i++) {
+        if (images[i].classList.contains("toggled")) {
+            images[i].classList.remove('toggled');
+        }
     }
-}
     alert('resetButton function has been activated');
 
     resetGame();
@@ -193,7 +187,7 @@ function resetGame() {
         'assets/images/watermelon (1).png'
     ];
 
-    getRandomImage = (imageDiv) => {
+    var getRandomImage = (imageDiv) => {
 
         if (imageDiv.classList.contains("toggled")) {
             return false;
@@ -207,18 +201,18 @@ function resetGame() {
 
         imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = `url('${selectedImage}')`;
-        imageDiv.classList.add("toggled")
+        imageDiv.classList.add("toggled");
 
         image_Array.splice(random_index, 1);
 
-        return true
+        return true;
 
     };
 
     bell = 0;
     failedAttempt = 4;
 
-    calculateAnswer = (element) => {
+    var calculateAnswer = (element) => {
         element;
         window.getComputedStyle(element, null).backgroundImage;
 
@@ -238,15 +232,15 @@ function resetGame() {
                 break;
             default:
                 if (failedAttempt > 2) {
-                    failedAttempt -= 1
+                    failedAttempt -= 1;
                     alert(`You have ${failedAttempt} lives left`);
                 } else if (failedAttempt == 2) {
-                    failedAttempt -= 1
-                    alert('last life left')
+                    failedAttempt -= 1;
+                    alert('last life left');
 
                 } else {
-                    alert('You have 0 lives left')
-                    failedAttempt -= 1
+                    alert('You have 0 lives left');
+                    failedAttempt -= 1;
 
                 }
                 break;

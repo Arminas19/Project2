@@ -91,3 +91,5 @@ which reset's the images and the player can play again.
 * I fixed the mobile screen problem by adding a div that surrounds the title so that the title is contained in a smaller section.  
 * I removed console.log's from my code
 * I updated the image-container divs so that the user can only click the box once. 
+* Validated my JavaScript code, now their is only 6 warrnings. 
+* Left comment's for my HTML code.
