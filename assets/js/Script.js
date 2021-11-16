@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     let divs = document.getElementsByClassName("Game-container");
-    for (div of divs) {
+    for (var div of divs) {
 
         div.addEventListener("click", function (event) {
 
@@ -93,12 +93,6 @@ function calculateAnswer(element) {
 
             }
             break;
-
-
-        //failedAttempt -= 1;
-        //alert(`You have ${failedAttempt} lives left`);
-
-
     }
 
 
@@ -111,10 +105,6 @@ function calculateAnswer(element) {
 
 }
 
-
-
-
-
 /* This function is called when the player has guessed 3 bell icons, The purpose of the arrow functions is to stop the game
 from being played by setting the images.style.backgroundImage to undifined and leaving the calculateAnswer function empty. */
 function playerHasWon() {
@@ -123,12 +113,12 @@ function playerHasWon() {
     let win = parseInt(document.getElementById('win').innerText);
     document.getElementById('win').innerText = ++win;
 
-    var getRandomImage = (imageDiv) => {
+    getRandomImage = (imageDiv) => {
         let imagesArray = imageDiv.getElementsByClassName('image-div')[0];
         imagesArray.style.backgroundImage = undefined;
     };
 
-    var calculateAnswer = () => {
+    calculateAnswer = () => {
 
     };
 
@@ -142,11 +132,11 @@ function playerHasLost() {
     let loss = parseInt(document.getElementById('loss').innerText);
     document.getElementById('loss').innerText = ++loss;
 
-    var getRandomImage = (imageDiv) => {
+    getRandomImage = (imageDiv) => {
         let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = undefined;
     };
-    var calculateAnswer = () => {
+    calculateAnswer = () => {
 
     };
 }
@@ -187,7 +177,7 @@ function resetGame() {
         'assets/images/watermelon (1).png'
     ];
 
-    var getRandomImage = (imageDiv) => {
+    getRandomImage = (imageDiv) => {
 
         if (imageDiv.classList.contains("toggled")) {
             return false;
@@ -212,7 +202,7 @@ function resetGame() {
     bell = 0;
     failedAttempt = 4;
 
-    var calculateAnswer = (element) => {
+    calculateAnswer = (element) => {
         element;
         window.getComputedStyle(element, null).backgroundImage;
 
