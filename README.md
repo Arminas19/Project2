@@ -97,3 +97,6 @@ which reset's the images and the player can play again.
    + The last warning I got was 'Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (getRandomImage, calculateAnswer)'. 
 * Left comment's for my HTML code.
 * HTML code validator says there are 18 errors all of them are alt and src attribute errors which are easy to add, but when I do it completely ruins the position of all the divs and since I'm adding a picture later, the src attributes icon appears which is unwanted.  
+* Mobile Screen Test 
+   + I have checked all screen sizes and found no bugs.
+   ![Mobile Screen Test](assets/images/Test.PNG)
