@@ -100,3 +100,4 @@ which reset's the images and the player can play again.
 * Mobile Screen Test 
    + I have checked all screen sizes and found no bugs.
    ![Mobile Screen Test](assets/images/Test.PNG)
+* Added Favicon to website.
