@@ -96,3 +96,4 @@ which reset's the images and the player can play again.
    + 6 out of the 11 warnings are 'Reassignment of (Function_Here), which is a function. Use 'var' or 'let' to declare bindings that may change', - tried fixing this issue by adding var but that seemed to mess up my code. 
    + The last warning I got was 'Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (getRandomImage, calculateAnswer)'. 
 * Left comment's for my HTML code.
+* HTML code validator says there are 18 errors all of them are alt and src attribute errors which are easy to add, but when I do it completely ruins the position of all the divs and since I'm adding a picture later, the src attributes icon appears which is unwanted.  
