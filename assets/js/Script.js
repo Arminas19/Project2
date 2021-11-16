@@ -1,4 +1,9 @@
 /*jshint esversion: 6 */
+
+/* Once the game loads this function is activated and the divs in 'Game-container' 
+now have an event Listener that waits for a click. Once a div is clicked the two function 
+get called.
+*/
 document.addEventListener("DOMContentLoaded", function () {
 
     let divs = document.getElementsByClassName("Game-container");
@@ -38,9 +43,9 @@ function getRandomImage(imageDiv) {
     }
 
 
-    random_index = Math.floor(Math.random() * image_Array.length);
+    var random_index = Math.floor(Math.random() * image_Array.length);
 
-    selectedImage = image_Array[random_index];
+    var selectedImage = image_Array[random_index];
 
     let imagesArray = imageDiv.getElementsByClassName('image-container')[0];
     imagesArray.style.backgroundImage = `url('${selectedImage}')`;
@@ -184,12 +189,12 @@ function resetGame() {
         }
 
 
-        random_index = Math.floor(Math.random() * image_Array.length);
+        var random_index = Math.floor(Math.random() * image_Array.length);
 
-        selectedImage = image_Array[random_index];
+        var selectedImage = image_Array[random_index];
 
 
-        imagesArray = imageDiv.getElementsByClassName('image-container')[0];
+        var imagesArray = imageDiv.getElementsByClassName('image-container')[0];
         imagesArray.style.backgroundImage = `url('${selectedImage}')`;
         imageDiv.classList.add("toggled");
 
