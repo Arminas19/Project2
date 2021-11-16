@@ -91,5 +91,8 @@ which reset's the images and the player can play again.
 * I fixed the mobile screen problem by adding a div that surrounds the title so that the title is contained in a smaller section.  
 * I removed console.log's from my code
 * I updated the image-container divs so that the user can only click the box once. 
-* Validated my JavaScript code, now their is only 6 warrnings. 
+* Validated my JavaScript code, now their is only 11 warrnings. 
+   + 4 out of the 11 warnings are 'Expected an assignment or function call and instead saw an expression ' warnings.
+   + 6 out of the 11 warnings are 'Reassignment of (Function_Here), which is a function. Use 'var' or 'let' to declare bindings that may change', - tried fixing this issue by adding var but that seemed to mess up my code. 
+   + The last warning I got was 'Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (getRandomImage, calculateAnswer)'. 
 * Left comment's for my HTML code.
